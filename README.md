@@ -32,8 +32,9 @@ and then download the Configuration file.
 Now we have to configure the VPN Properly:
 
 After Downloading the VPM Configuration file run this command
-
-``sudo openvpn example.ovpn``
+```
+sudo openvpn example.ovpn
+```
 
 <img width="593" height="247" alt="openvpn" src="https://github.com/user-attachments/assets/67031fa5-da15-46e9-980c-ffd8cb5b8dcd" />
 
@@ -47,9 +48,9 @@ For this I will use Nmap.A powerful tool for network scanning
 
 I will use -A flag for Agressive Scan
 
-
-`sudo nmap -A IP`
-
+```
+sudo nmap -A IP
+```
 
 I got the results.this machine is running only on port 80.
 
@@ -67,9 +68,14 @@ Lets check for this particular exploit online
 Now we have confirmed that this version is vulnerable so we will use **Exploit-DB** for this attack
 
 If you have not instelled the Exploit-db in the kali so 
-**Run** `sudo apt install exploitdb`
-For Updating database `searchsploit -u`
-
+**Run**
+```
+sudo apt install exploitdb
+```
+For Updating database 
+```
+searchsploit -u
+```
 
 **To Use this**
 
@@ -77,7 +83,10 @@ For Updating database `searchsploit -u`
 
 **Searchploit | Version name**
 
-**Run** `searchploit PHP 8.1.0-dev`
+**Run**
+```
+`searchploit PHP 8.1.0-dev`
+```
 
 <img width="1853" height="780" alt="exploit-db" src="https://github.com/user-attachments/assets/cfd5888a-f51f-4c89-94ab-42fca1c7ac64" />
 
@@ -92,8 +101,10 @@ But we will this one:
 _Searchploit -m 'exploit path'_
 
 
-**Run** `searchploit -m php/webapps/49933.py`
-
+**Run**
+```
+searchploit -m php/webapps/49933.py
+```
 It will be installed in your machine
 
 
@@ -103,25 +114,26 @@ Now we have organize it professionally
 
 Important:
 When we install any exploit so it stores like 49933.py so we have to rename it so we remember that
+```
+mv 49933.py PHP-8.1.0-dev.py
 
-`mv 49933.py PHP-8.1.0-dev.py`
+# Then Make a directory
 
-Then Make a directory
+mkdir PHP-8.1.0-dev
 
-`mkdir PHP-8.1.0-dev`
+# change path of the exploit
 
-change path of the exploit
-
-`cp PHP-8.1.0-dev.py PHP-8.1.0-dev`
-
+cp PHP-8.1.0-dev.py PHP-8.1.0-dev
+```
 Now our exploit is in the PHP-8.1.0-dev directory
 
 
 <img width="469" height="258" alt="in the directory" src="https://github.com/user-attachments/assets/fc8cdf20-3b03-4901-a775-8fb7f31d0d2a" />
 
 **Lets Interact with it**
-
-`python3 PHP-8.1.0-dev.py`
+```
+python3 PHP-8.1.0-dev.py
+```
 
 It is asking for full host url
 
