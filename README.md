@@ -244,7 +244,7 @@ Now see you can see the flag.txt
 
  and you will get the flag:
  
- `flag{4127d0530abf16d6d23973e3df8dbecb}`
+ `flag{##################}`
 
  **Why the Website Allowed This**
 
